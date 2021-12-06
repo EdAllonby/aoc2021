@@ -28,6 +28,7 @@ library
       FileUtils
       Lib
       One
+      Two
   other-modules:
       Paths_aoc2021
   hs-source-dirs:

@@ -28,6 +28,7 @@ library
       FileUtils
       Lib
       One
+      Three
       Two
   other-modules:
       Paths_aoc2021

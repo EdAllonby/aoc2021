@@ -1,7 +1,7 @@
 module Main where
 
 import Lib
-import Two (solveFirst, solveSecond)
+import Three (solveFirst, solveSecond)
 
 main :: IO ()
 main = do

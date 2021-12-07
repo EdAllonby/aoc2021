@@ -12,7 +12,8 @@ solveFirst = do
 solveSecond :: IO ()
 solveSecond = do
   commands <- getPuzzle
-  let (horizontal, depth, _) = foldl getFinalCoordinatesWithAim (0, 0, 0) commands
+  let (horizontal, depth, _) =
+        foldl getFinalCoordinatesWithAim (0, 0, 0) commands
   print $ horizontal * depth
 
 getFinalCoordinates :: (Int, Int) -> String -> (Int, Int)
@@ -26,7 +27,8 @@ getFinalCoordinates (horizontal, depth) command
 
 getFinalCoordinatesWithAim :: (Int, Int, Int) -> String -> (Int, Int, Int)
 getFinalCoordinatesWithAim (horizontal, depth, aim) command
-  | "forward" `isPrefixOf` command = (horizontal + commandAmount, depth + (aim * commandAmount), aim)
+  | "forward" `isPrefixOf` command =
+    (horizontal + commandAmount, depth + (aim * commandAmount), aim)
   | "up" `isPrefixOf` command = (horizontal, depth, aim - commandAmount)
   | "down" `isPrefixOf` command = (horizontal, depth, aim + commandAmount)
   | otherwise = error "not exhaustive"

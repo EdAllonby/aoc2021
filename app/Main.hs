@@ -1,6 +1,6 @@
 module Main where
 
-import Four (solveFirst, solveSecond)
+import Five (solveFirst, solveSecond)
 
 main :: IO ()
 main = do
